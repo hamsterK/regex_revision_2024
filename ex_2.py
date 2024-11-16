@@ -25,3 +25,15 @@ text3 = "aba, abba"
 match6 = re.findall(r"abb?a", text3)
 
 print(match6)
+
+text4 = "author=Pushkin; title = Oniegin; price =200; year= 2001"
+# match7 = re.findall(r"\w+\s*=\s*[^;]+", text4)
+match7 = re.findall(r"(\w+)\s*=\s*([^;]+)", text4)
+
+print(match7)
+
+text5 = "<p>Picture <img src='bg.jpg'> in text</p>"
+# match8 = re.findall(r"<img.*?>", text5
+match8 = re.findall(r"<img\s+[^>]*?src\s*=\s*[^>]+>", text5)
+
+print(match8)
